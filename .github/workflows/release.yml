@@ -1,7 +1,9 @@
+# SYQEL Art — desktop release workflow. Clones the private GitLab source at build time, builds
+# macOS + Windows, OS-signs (Apple/Azure), updater-signs, publishes installers + latest.json.
 name: release-desktop
 on:
   push:
-    tags: ['v*'] 
+    tags: ['v*']
 
 jobs:
   build:
@@ -17,7 +19,6 @@ jobs:
             args: ''
     runs-on: ${{ matrix.platform }}
     steps:
-      
       - name: Clone private source
         run: git clone --depth 1 --branch main "https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/syqel/syqel-art.git" source
 
@@ -36,27 +37,29 @@ jobs:
         run: pnpm install --frozen-lockfile
         working-directory: source
 
+      # Windows code-signing via Azure Trusted Signing — the CLI tauri.conf's signCommand calls.
+      - name: Install trusted-signing-cli (Windows)
+        if: matrix.platform == 'windows-latest'
+        run: cargo install trusted-signing-cli
+
       - uses: tauri-apps/tauri-action@v0
         env:
-      
           TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
-      
           APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
           APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
           APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
           APPLE_ID: ${{ secrets.APPLE_ID }}
           APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-      
           AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
           AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
           AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
         with:
           projectPath: source/apps/desktop
           tagName: ${{ github.ref_name }}
-          releaseName: 'SYQEL ${{ github.ref_name }}'
+          releaseName: 'SYQEL Art ${{ github.ref_name }}'
           releaseDraft: true
           prerelease: false
-          includeUpdaterJson: true # generates latest.json for the updater endpoint
+          includeUpdaterJson: true
           args: ${{ matrix.args }}
