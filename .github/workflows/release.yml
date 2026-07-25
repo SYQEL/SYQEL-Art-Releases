@@ -34,7 +34,10 @@ jobs:
           targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
 
       - name: Install deps
-        run: pnpm install --frozen-lockfile
+        # Private @syqel/* packages live on GitHub Packages — append the read token before install
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PACKAGES_TOKEN }}" >> .npmrc
+          pnpm install --frozen-lockfile
         working-directory: source
 
       # Windows code-signing via Azure Trusted Signing — the CLI tauri.conf's signCommand calls.
