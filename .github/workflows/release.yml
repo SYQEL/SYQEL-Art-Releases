@@ -19,6 +19,9 @@ jobs:
             args: ''
     runs-on: ${{ matrix.platform }}
     steps:
+      # this repo, for RELEASE_NOTES.md (the private source is cloned separately, below)
+      - uses: actions/checkout@v4
+
       - name: Clone private source
         run: git clone --depth 1 --branch main "https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/syqel/syqel-art.git" source
 
@@ -45,6 +48,21 @@ jobs:
         if: matrix.platform == 'windows-latest'
         run: cargo install trusted-signing-cli
 
+      # Release notes are ALWAYS customer-facing. With no releaseBody the release ships with an empty
+      # body and GitHub surfaces the tag's COMMIT MESSAGE instead — ours are engineering notes and one
+      # has already named a token on a public page. Render RELEASE_NOTES.md and pass it explicitly.
+      - name: Render release notes
+        id: notes
+        shell: bash
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          body="$(sed "s/{{VERSION}}/${version}/g" RELEASE_NOTES.md)"
+          {
+            echo 'body<<SYQEL_NOTES_EOF'
+            echo "$body"
+            echo 'SYQEL_NOTES_EOF'
+          } >> "$GITHUB_OUTPUT"
+
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required to publish the GitHub Release
@@ -63,6 +81,7 @@ jobs:
           projectPath: source/apps/desktop
           tagName: ${{ github.ref_name }}
           releaseName: 'SYQEL Art ${{ github.ref_name }}'
+          releaseBody: ${{ steps.notes.outputs.body }}
           releaseDraft: true
           prerelease: false
           includeUpdaterJson: true
