@@ -1,0 +1,3 @@
+# The release workflow renders this into the GitHub Release body; CRLF broke the heredoc that
+# carries it, so pin it to LF on every platform (the Windows runner checks out CRLF by default).
+RELEASE_NOTES.md text eol=lf

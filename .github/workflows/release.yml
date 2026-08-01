@@ -51,12 +51,17 @@ jobs:
       # Release notes are ALWAYS customer-facing. With no releaseBody the release ships with an empty
       # body and GitHub surfaces the tag's COMMIT MESSAGE instead — ours are engineering notes and one
       # has already named a token on a public page. Render RELEASE_NOTES.md and pass it explicitly.
+      # Both matrix runners set the release body, so whichever finishes LAST wins — and the Windows
+      # checkout gets CRLF line endings, which broke the multi-line $GITHUB_OUTPUT heredoc and
+      # published a body missing everything above the download table. Strip CR explicitly (belt and
+      # braces with the .gitattributes eol=lf rule) and drop the authoring comment, which is guidance
+      # for us and has no business on a customer-facing page.
       - name: Render release notes
         id: notes
         shell: bash
         run: |
           version="${GITHUB_REF_NAME#v}"
-          body="$(sed "s/{{VERSION}}/${version}/g" RELEASE_NOTES.md)"
+          body="$(sed "s/{{VERSION}}/${version}/g" RELEASE_NOTES.md | tr -d '\r' | sed '/^<!--/,/^-->/d')"
           {
             echo 'body<<SYQEL_NOTES_EOF'
             echo "$body"
