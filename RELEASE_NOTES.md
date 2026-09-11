@@ -8,7 +8,7 @@
   language — no commit messages, no file or function names, no internal tooling, never a secret.
 -->
 
-**Fixes system audio.** In 1.3.0 the visuals could stop responding to what was playing shortly after you started — this release restores it. Casting to your TV is also far more reliable: SYQEL Art now re-finds your TV at the moment you pick it, so one that moved or restarted still connects; it works on networks that hand out only IPv6 addresses; and a slow TV can no longer stutter the audio on the computer sending it. Choosing a visual straight after launch works properly too — it used to be ignored if you were quick.
+**Fixes crackling when you cast to a TV.** Sound sent from your computer to a TV could develop tiny gaps that you heard as clicks or crackle every few seconds. SYQEL Art no longer loses those fragments, so what reaches your TV now matches what is playing on your computer.
 
 ### Which file do I need?
 
