@@ -8,7 +8,7 @@
   language — no commit messages, no file or function names, no internal tooling, never a secret.
 -->
 
-**Better sound and a steadier picture when you cast to a TV.** Audio sent from your computer could develop tiny gaps you heard as clicks or crackle every few seconds — that is fixed, and what reaches your TV now matches what is playing here. A TV or window that fell behind could also go quiet for good until you restarted; it now catches back up on its own. If you are subscribed, the watermark no longer lingers on your TV when your subscription becomes active mid-session. And starting a new cast straight after another one no longer leaves your computer advertising the old one, so TVs are easier to find.
+**Casting to a TV is cleaner and more dependable, and problems now tell you what went wrong.** Audio sent from your computer could develop tiny gaps you heard as clicks or crackle every few seconds — that is fixed, and what reaches your TV matches what is playing here. A TV or window that fell behind could go quiet for good until you restarted; it now catches back up on its own. Connecting to system audio no longer sits there doing nothing when something is wrong: if the recording permission was refused or the source is unavailable, it says so instead of waiting forever. Picking a TV that has moved or switched off comes back quickly rather than hanging, the TV list keeps updating while you try, and your computer no longer keeps offering a cast it has already stopped. If you are subscribed, the watermark no longer lingers on your TV when your subscription becomes active mid-session.
 
 ### Which file do I need?
 
