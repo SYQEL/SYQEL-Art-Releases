@@ -8,7 +8,7 @@
   language — no commit messages, no file or function names, no internal tooling, never a secret.
 -->
 
-**Fixes crackling when you cast to a TV.** Sound sent from your computer to a TV could develop tiny gaps that you heard as clicks or crackle every few seconds. SYQEL Art no longer loses those fragments, so what reaches your TV now matches what is playing on your computer.
+**Better sound and a steadier picture when you cast to a TV.** Audio sent from your computer could develop tiny gaps you heard as clicks or crackle every few seconds — that is fixed, and what reaches your TV now matches what is playing here. A TV or window that fell behind could also go quiet for good until you restarted; it now catches back up on its own. If you are subscribed, the watermark no longer lingers on your TV when your subscription becomes active mid-session. And starting a new cast straight after another one no longer leaves your computer advertising the old one, so TVs are easier to find.
 
 ### Which file do I need?
 
