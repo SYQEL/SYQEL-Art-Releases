@@ -8,7 +8,7 @@
   language — no commit messages, no file or function names, no internal tooling, never a secret.
 -->
 
-**Casting is cleaner and more dependable, and the app now tells you when macOS is in the way.** Audio sent to a TV could develop tiny gaps you heard as clicks or crackle — that is fixed, and what reaches your TV matches what is playing here. A TV or window that fell behind could go quiet for good until you restarted; it now catches back up on its own. On a Mac, individual apps like Spotify only appear in the source list once macOS has been given screen-recording access, so the app now says so, offers to ask for it, and reminds you that it has to be reopened before the change takes effect — instead of just showing a short list. Connecting to system audio also reports what went wrong rather than sitting there, picking a TV that has moved or switched off comes back quickly instead of hanging, the TV list keeps updating while you try, and your computer no longer keeps offering a cast it has already stopped. If you are subscribed, the watermark no longer lingers on your TV when your subscription becomes active mid-session.
+**Four new volumes of visuals: Ambient & Chill, Tunnels, Kaleidoscope and Seasons.** That's over 160 new scenes, from ocean swells and auroras to fly-through tunnels, kaleidoscopes and a full year of seasons. A handful are free for everyone, and the rest come with SYQEL Art Pro. The new visuals react to each instrument in your music, and the Sensitivity slider now truly controls how calm or wild the visuals get. On a TV, it carries over when you cast. The app opens straight onto Soft Fractal. A TV you cast to now asks you to start the music until audio actually arrives. Plus many smaller fixes.
 
 ### Which file do I need?
 
