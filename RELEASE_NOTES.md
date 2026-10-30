@@ -8,7 +8,7 @@
   language — no commit messages, no file or function names, no internal tooling, never a secret.
 -->
 
-**Four new volumes of visuals: Ambient & Chill, Tunnels, Kaleidoscope and Seasons.** That's over 150 new scenes, from ocean swells and water ripples to fly-through tunnels, kaleidoscopes and a full year of seasons. A handful are free for everyone, and the rest come with SYQEL Art Pro. The new visuals react to each instrument in your music, and the Sensitivity slider now truly controls how calm or wild the visuals get. On a TV, it carries over when you cast. A TV you cast to now asks you to start the music until audio actually arrives. Plus many smaller fixes.
+**Over 1,000 visuals, rebuilt to react more clearly to every instrument.** Cast to a TV and it now mirrors the exact visual you pick, in time with the music, rendered sharp and smooth at the TV's full resolution. TVs show only the visuals they can play well, and the app tells you which ones aren't available on your TV. New setting: add orbs that follow the voices. Bought SYQEL Art on syqel.com? Sign in with your SYQEL account to remove the watermark. Plus many fixes to casting and playback.
 
 ### Which file do I need?
 
