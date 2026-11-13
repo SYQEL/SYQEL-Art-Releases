@@ -8,7 +8,7 @@
   language — no commit messages, no file or function names, no internal tooling, never a secret.
 -->
 
-**Over 1,000 visuals, rebuilt to react more clearly to every instrument.** Cast to a TV and it now mirrors the exact visual you pick, in time with the music, rendered sharp and smooth at the TV's full resolution. TVs show only the visuals they can play well, and the app tells you which ones aren't available on your TV. New setting: add orbs that follow the voices. Bought SYQEL Art on syqel.com? Sign in with your SYQEL account to remove the watermark. Plus many fixes to casting and playback.
+**New: the Featured volume — the eight visuals from syqel.com, including Hero, a great skull made of hundreds of tiny skulls that jump, open their jaws and scatter with the music.** SYQEL Art now has a new built-in listener that hears each instrument more precisely, right on your computer. Visuals also start faster on Windows.
 
 ### Which file do I need?
 
