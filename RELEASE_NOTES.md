@@ -8,7 +8,7 @@
   language — no commit messages, no file or function names, no internal tooling, never a secret.
 -->
 
-**New: the Featured volume — the eight visuals from syqel.com, including Hero, a great skull made of hundreds of tiny skulls that jump, open their jaws and scatter with the music.** SYQEL Art now has a new built-in listener that hears each instrument more precisely, right on your computer. Visuals also start faster on Windows.
+**New in SYQEL Art 2.0: a guided first run.** It opens with a short story set to music, then helps you connect your music, add orbs that follow the voices and let the Director drive. Try everything free for 7 days on the yearly plan, and we'll email you a reminder before you're charged. Casting to your TV stays free, with the watermark.
 
 ### Which file do I need?
 
